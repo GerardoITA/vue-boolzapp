@@ -51,7 +51,14 @@
                     </div>
                 </div>
                 <div class="contact_menu">
-                    <div class="contact">
+                    <div v-for="(contatto , index) in contacts" class="contact">
+                        <div class="contact_picture">
+                            <img class="profile_picture" :src="contatto.avatar">
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="contact">
                         <div class="contact_picture">
                             <img class="profile_picture" src="img/avatar_1.jpg">
                         </div>
@@ -66,7 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>   -->
                          
                 </div>
             </div>
