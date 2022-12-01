@@ -115,17 +115,65 @@ main {
 }
 .searchbar_menu {
     height: 70px;
+    padding: 15px;
+    box-sizing: border-box;
+ 
 }
+.searchbar_menu_inner {
+    height: 40px;
+    background-color: white;
+    border: 1px solid rgb(220, 220, 220);
+    display: flex;
 
+    
+}
+.searchbar_menu_inner_logo{
+    width: 15%;
+    color: #B1B1B1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgb(220, 220, 220);
+    
+}
+.searchbar_menu_inner_search {
+    width: 85%;
+    border: none;
+    padding-left: 30px;
+}
 .contact_menu {
     height: calc(100% - (70px + 105px + 85px));
     background-color: white;
     overflow-y: scroll;
 }
-
+.contact_picture {
+    height: 60px;
+    width: 60px;
+}
 .contact {
     height: 100px;
     border-top: 1px solid rgb(220, 220, 220);
+    padding-left: 10px;
+    width: calc(100% - 10px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contact_info {
+    margin-left: 20px;
+    width: 100%;
+}
+.contact_info_lastmessage {
+    position: relative;
+    width: calc(100%);
+    color: rgb(150, 150, 150);
+}
+.contact_info_lastmessage_time {
+    font-size: 10px;
+    color: rgb(150, 150, 150);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 /* // Chat // */
 .chat {
@@ -141,13 +189,17 @@ main {
     align-items: center;
 }
 .chat_inner {
-    min-height: calc(100% - (85px + 105px));
+    box-sizing: border-box;
+    min-height: calc(100% - (85px + 85px));
     border-left: 1px solid #B1B1B1;
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .chat_input {
-    min-height: 105px;
+    min-height: 85px;
     border-left: 1px solid #B1B1B1;
     border-top: 1px solid #B1B1B1;
     display: flex;
@@ -157,9 +209,11 @@ main {
 }
 .chat_input_text {
     width: calc(100% - 300px);
-    height: 70px;
+    height: 50px;
     background-color: white;
     border-radius: 10px;
+    border: 1px solid rgb(220, 220, 220);
+    padding-left: 50px;
 }
 .chat_input_emoji, .chat_input_voice {
     margin: 20px;
@@ -193,4 +247,34 @@ main {
 .chat_menu_info_data_access{
     color: rgb(150, 150, 150);
     font-size: 14px;
+}
+
+/* // Messages // */
+.message_user {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    background-color: rgb(213, 249, 186);
+    max-width: 30%;
+    border-radius: 15px;
+    position: relative;
+    left: 70%;
+    margin-bottom: 10px;
+}
+.message_bot {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    max-width: 30%;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.message_time {
+    font-size: 10px;
+    color: rgb(150, 150, 150);
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
 }
