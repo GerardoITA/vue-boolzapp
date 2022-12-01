@@ -87,7 +87,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro L.',
+                    name: 'Giuseppe S.',
                     avatar: 'img/avatar_5.jpg',
                     visible: true,
                     messages: [
@@ -104,7 +104,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Claudia',
+                    name: 'Mao Z.',
                     avatar: 'img/avatar_6.jpg',
                     visible: true,
                     messages: [
@@ -126,7 +126,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Federico',
+                    name: 'Pittore',
                     avatar: 'img/avatar_7.jpg',
                     visible: true,
                     messages: [
@@ -143,7 +143,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Davide',
+                    name: 'Benito M.',
                     avatar: 'img/avatar_8.jpg',
                     visible: true,
                     messages: [
