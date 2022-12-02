@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="contact_menu">
-                    <div v-for="(contatto , index) in contacts" class="contact">
+                    <div @click="selectContact, (contactSelected = indiceContatto)" v-for="(contatto , indiceContatto) in contacts" class="contact" :class="contactSelected === indiceContatto ? contactSelectedClass : contactNotSelectedClass ">
                         <div class="contact_picture">
                             <img class="profile_picture" :src="contatto.avatar">
                         </div>
@@ -86,11 +86,13 @@
                 <div class="chat_menu upper_gray">
                     <div class="chat_menu_contact">
                         <div class="chat_menu_info_picture">
-                            <img class="profile_picture" src="img/avatar_1.jpg">
+                            <img class="profile_picture" :src="contacts[0].image">
                         </div>
                         <div class="chat_menu_info_data">
                             <div class="chat_menu_info_data_name">
-                                Michele
+                                {{ contacts[0].name }}
+                                {{contactSelected}}
+                                
                             </div>
                             <div class="chat_menu_info_data_access">
                                 Ultimo accesso oggi alle 12:10
@@ -104,7 +106,15 @@
                     </div>
                 </div>
                 <div class="chat_inner">
-                    <div class="message_user">
+                    <div v-for="(messaggio , indiceMessaggio) in contacts[0].messages" :class="contacts[0].messages[indiceMessaggio].status == `sent` ? messageUser : messageBot">
+                        {{ contacts[0].messages[indiceMessaggio].message }}
+                
+                        <div class="message_time">
+                            {{ contacts[0].messages[indiceMessaggio].date }}
+                        </div>
+                    </div>
+
+<!--                     <div class="message_user">
                         Ciao
                         <div class="message_time">
                             12:34
@@ -127,7 +137,7 @@
                         <div class="message_time">
                             12:34
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="chat_input upper_gray">
@@ -137,6 +147,8 @@
                     <div class="chat_input_voice icon"><i class="fa-solid fa-microphone"></i></div>
                 </div>
             </div>
+
+            <button id="button">DEBUG</button>
         </main>
 
 

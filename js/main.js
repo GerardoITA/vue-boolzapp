@@ -2,6 +2,13 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            messageSent: false,
+            messageUser: `message_user`,
+            messageBot: `message_bot`,
+            contactSelected: ``,
+
+            contactSelectedClass: "contact_selected",
+            contactNotSelectedClass: "contact_not_selected",
             contacts: [
                 {
                     name: 'Michele',
@@ -170,7 +177,15 @@ createApp({
         }
     },
     methods: {
-    
+
     }
 }).mount(`#app`)
+
+
+let debugButton = document.getElementById("button");
+debugButton.addEventListener("click",
+    function(){
+       
+    }
+)
 

@@ -158,6 +158,13 @@ main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
+}
+.contact_selected {
+    background-color: rgb(234, 234, 234);
+}
+.contact_not_selected {
+    background-color:  white;
 }
 .contact_info {
     margin-left: 20px;
@@ -277,4 +284,10 @@ main {
     position: absolute;
     bottom: 6px;
     right: 10px;
+}
+
+#button {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
