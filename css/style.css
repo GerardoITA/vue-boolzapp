@@ -45,6 +45,9 @@
     color: #8EDAFC;;
     font-size: 25px;
 }
+.display_none {
+    display: none;
+}
 
 /*/////// Background ///////*/
 body {

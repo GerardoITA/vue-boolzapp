@@ -6,6 +6,9 @@ createApp({
             messageUser: `message_user`,
             messageBot: `message_bot`,
             contactSelected: `0`,
+            displayNone: `display_none`,
+            displayRegular: ``,
+            inputContact: ``,
             inputText: ``,
 
             contactSelectedClass: "contact_selected",
@@ -181,7 +184,7 @@ createApp({
         selectContact(contactIndex) {
             this.contactSelected = contactIndex
         }, 
-          sendMessage(){
+        sendMessage(){
             if (this.inputText.length > 0){
                 /* Messaggio utente */
                 let inputMessage = {
@@ -208,9 +211,7 @@ createApp({
             } else {
                 this.inputText = ``;
             }
-            
- 
-        }  
+        },  
     }
 }).mount(`#app`)
 
