@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <div class="chat_inner">
-                    <div v-for="(messaggio , indiceMessaggio) in contacts[0].messages" :class="contacts[0].messages[indiceMessaggio].status == `sent` ? messageUser : messageBot">
+                    <div v-for="(messaggio , indiceMessaggio) in contacts[contactSelected].messages" :class="contacts[contactSelected].messages[indiceMessaggio].status == `sent` ? messageUser : messageBot">
                         {{ contacts[contactSelected].messages[indiceMessaggio].message }}
                 
                         <div class="message_time">
