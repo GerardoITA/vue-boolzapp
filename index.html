@@ -86,12 +86,11 @@
                 <div class="chat_menu upper_gray">
                     <div class="chat_menu_contact">
                         <div class="chat_menu_info_picture">
-                            <img class="profile_picture" :src="contacts[0].avatar">
+                            <img class="profile_picture" :src="contacts[contactSelected].avatar">
                         </div>
                         <div class="chat_menu_info_data">
                             <div class="chat_menu_info_data_name">
-                                {{ contacts[0].name }}
-                                {{contactSelected}}
+                                {{ contacts[contactSelected].name }}
                                 
                             </div>
                             <div class="chat_menu_info_data_access">
@@ -107,10 +106,10 @@
                 </div>
                 <div class="chat_inner">
                     <div v-for="(messaggio , indiceMessaggio) in contacts[0].messages" :class="contacts[0].messages[indiceMessaggio].status == `sent` ? messageUser : messageBot">
-                        {{ contacts[0].messages[indiceMessaggio].message }}
+                        {{ contacts[contactSelected].messages[indiceMessaggio].message }}
                 
                         <div class="message_time">
-                            {{ contacts[0].messages[indiceMessaggio].date }}
+                            {{ contacts[contactSelected].messages[indiceMessaggio].date }}
                         </div>
                     </div>
 
