@@ -181,7 +181,7 @@ createApp({
         selectContact(contactIndex) {
             this.contactSelected = contactIndex
         }, 
-       /*   sendMessage(){
+          sendMessage(){
             let inputMessage = {
                 
                 date: '10/01/2020 17:30:55',
@@ -189,10 +189,10 @@ createApp({
                 status: 'sent'
             }
             console.log(inputMessage),
-            this.contacts[0].push(inputMessage);
+            this.contacts[0].messages.push(inputMessage);
             this.inputText = ``;
  
-        } */ 
+        }  
     }
 }).mount(`#app`)
 
