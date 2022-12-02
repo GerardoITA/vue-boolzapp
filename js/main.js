@@ -182,15 +182,20 @@ createApp({
             this.contactSelected = contactIndex
         }, 
           sendMessage(){
-            let inputMessage = {
-                
-                date: '10/01/2020 17:30:55',
-                message: this.inputText,
-                status: 'sent'
+            if (this.inputText.length > 0){
+                let inputMessage = {
+
+                    date: '10/01/2020 17:30:55',
+                    message: this.inputText,
+                    status: 'sent'
+                }
+                console.log(inputMessage),
+                    this.contacts[0].messages.push(inputMessage);
+                this.inputText = ``;
+            } else {
+                this.inputText = ``;
             }
-            console.log(inputMessage),
-            this.contacts[0].messages.push(inputMessage);
-            this.inputText = ``;
+            
  
         }  
     }
