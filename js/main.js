@@ -191,7 +191,7 @@ createApp({
                     status: 'sent'
                 }
                 console.log(inputMessage),
-                this.contacts[0].messages.push(inputMessage);
+                    this.contacts[this.contactSelected].messages.push(inputMessage);
                 this.inputText = ``;
                 /* Messaggio di risposta */
                     let botMessage = {
@@ -199,9 +199,9 @@ createApp({
                         message: `Okay!`,
                         status: 'received'
                     }
-                    setTimeout(function(){
+                    setTimeout(()=>{
                         console.log(botMessage)
-                        this.contacts[0].messages.push(botMessage);
+                        this.contacts[this.contactSelected].messages.push(botMessage);
 
                     }, 1000);
 
