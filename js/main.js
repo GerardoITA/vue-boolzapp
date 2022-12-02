@@ -6,6 +6,7 @@ createApp({
             messageUser: `message_user`,
             messageBot: `message_bot`,
             contactSelected: ``,
+            inputText: ``,
 
             contactSelectedClass: "contact_selected",
             contactNotSelectedClass: "contact_not_selected",
@@ -177,15 +178,24 @@ createApp({
         }
     },
     methods: {
-
+        selectContact() {
+            this.contactSelected = indiceContatto
+        },
+       /*  sendMessage(){
+            let inputMessage = {
+                
+                date: '10/01/2020 17:30:55',
+                message: this.inputText,
+                status: 'sent'
+            }
+            console.log(inputMessage)
+            this.contacts.unshift(this.inputMessage);
+            this.inputText = ``;
+            
+        } */
     }
 }).mount(`#app`)
 
 
-let debugButton = document.getElementById("button");
-debugButton.addEventListener("click",
-    function(){
-       
-    }
-)
+
 
