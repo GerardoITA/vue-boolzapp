@@ -49,6 +49,7 @@
     display: none;
 }
 
+
 /*/////// Background ///////*/
 body {
     background-color: #DBDBD3; 
@@ -91,7 +92,7 @@ main {
 }
 .menu_user_buttons {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 .notifications_menu {
     height: 105px;
@@ -231,7 +232,7 @@ main {
 .chat_menu_buttons {
     display: flex;
     justify-content: space-evenly;
-    gap: 25px;
+    gap: 20px;
 }
 .chat_menu_contact {
     display: flex;
