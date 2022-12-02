@@ -121,8 +121,8 @@
                 </div>
                 <div class="chat_input upper_gray">
                     <div class="chat_input_emoji icon"><i class="fa-regular fa-face-smile"></i></div>
-                    <input v-model="inputText" type="text" placeholder="Scrivi un messaggio" class="chat_input_text"id="chatText">
-                    <div  @click="sendMessage" class="chat_input_voice icon"><i class="fa-solid fa-microphone"></i></div>
+                    <input v-model="inputText" @keyup.enter="sendMessage" type="text" placeholder="Scrivi un messaggio" class="chat_input_text"id="chatText">
+                    <div   class="chat_input_voice icon"><i class="fa-solid fa-microphone"></i></div>
                 </div>
             </div>
 
