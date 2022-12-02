@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="contact_menu">
-                    <div @click="selectContact, (contactSelected = indiceContatto)" v-for="(contatto , indiceContatto) in contacts" class="contact" :class="contactSelected === indiceContatto ? contactSelectedClass : contactNotSelectedClass ">
+                    <div @click="selectContact(indiceContatto)" v-for="(contatto , indiceContatto) in contacts" class="contact" :class="contactSelected === indiceContatto ? contactSelectedClass : contactNotSelectedClass ">
                         <div class="contact_picture">
                             <img class="profile_picture" :src="contatto.avatar">
                         </div>
@@ -143,7 +143,7 @@
                 <div class="chat_input upper_gray">
                     <div class="chat_input_emoji icon"><i class="fa-regular fa-face-smile"></i></div>
                     <input v-model="inputText" type="text" placeholder="Scrivi un messaggio" class="chat_input_text"id="chatText">
-                    <div @click="sendMessage" class="chat_input_voice icon"><i class="fa-solid fa-microphone"></i></div>
+                    <div  class="chat_input_voice icon"><i class="fa-solid fa-microphone"></i></div>
                 </div>
             </div>
 

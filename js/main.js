@@ -178,21 +178,21 @@ createApp({
         }
     },
     methods: {
-        selectContact() {
-            this.contactSelected = indiceContatto
-        },
-       /*  sendMessage(){
+        selectContact(contactIndex) {
+            this.contactSelected = contactIndex
+        }, 
+       /*   sendMessage(){
             let inputMessage = {
                 
                 date: '10/01/2020 17:30:55',
                 message: this.inputText,
                 status: 'sent'
             }
-            console.log(inputMessage)
-            this.contacts.unshift(this.inputMessage);
+            console.log(inputMessage),
+            this.contacts[0].push(inputMessage);
             this.inputText = ``;
-            
-        } */
+ 
+        } */ 
     }
 }).mount(`#app`)
 
