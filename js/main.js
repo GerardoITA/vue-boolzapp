@@ -175,9 +175,7 @@ createApp({
                         }
                     ],
                 }
-            ]
-
-        
+            ],
         }
     },
     methods: {
@@ -212,6 +210,13 @@ createApp({
                 this.inputText = ``;
             }
         },  
+        filtroContatti(){
+            return this.contacts.filter((item) => {
+                return this.inputContact.toLowerCase().split(``).every( v => item.name.toLowerCase().includes(v))
+            }
+            
+            )
+        },
     }
 }).mount(`#app`)
 

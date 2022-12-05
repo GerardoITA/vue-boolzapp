@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="contact_menu">
-                    <div @click="selectContact(indiceContatto)" v-for="(contatto , indiceContatto) in contacts" class="contact" :class="contactSelected === indiceContatto ? contactSelectedClass : contactNotSelectedClass ">
+                    <div @click="selectContact(indiceContatto)" v-for="(contatto , indiceContatto) in filtroContatti()" class="contact" :class="contactSelected === indiceContatto ? contactSelectedClass : contactNotSelectedClass ">
                         <div class="contact_picture">
                             <img class="profile_picture" :src="contatto.avatar">
                         </div>
